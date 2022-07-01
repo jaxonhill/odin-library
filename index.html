@@ -11,6 +11,35 @@
     </head>
 
     <body>
+        <div class="modal active">
+            <button class="x-btn">x</button>
+            <form action="">
+                <h3>Enter Details</h3>
+                <div class="form-container">
+                    <div class="flex first">
+                        <label for="title">Title:</label>
+                        <input type="text" id="title" name="title">
+                    </div>
+                    <div class="flex">
+                        <label for="author">Author:</label>
+                        <input type="text" id="author" name="author">
+                    </div>
+                    <div class="flex">
+                        <label for="pages">Number of Pages:</label>
+                        <input type="tel" id="pages" name="pages">
+                    </div>
+                    <div class="flex">
+                        <label for="year">Year:</label>
+                        <input type="text" id="year" name="year">
+                    </div>
+                    <div class="flex">
+                        <label for="genre">Genre:</label>
+                        <input type="text" id="genre" name="genre">
+                    </div>
+                </div>
+                <button type="submit" id="submit">Submit</button>
+            </form>
+        </div>
         <button class="add-btn">+</button>
         <h1>My Book Library</h1>
         <div class="card-container">
@@ -43,6 +72,7 @@
                 <p><strong>Genre: </strong>Fantasy</p>
             </div>
         </div>
+        <div class="active" id="overlay"></div>
     </body>
 
 </html>
