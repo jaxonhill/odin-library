@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@600;900&family=Roboto:wght@400;700&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-size: 62.5%;
+}
+
+:root {
+    --lightertan: #f2e9e4;
+    --darkertan: #c9ada7;
+    --magenta: #9a8c98;
+    --blue: #4a4e69;
+    --darkblue: #22223b;
+    --offblack: #212121;
+    --offwhite: #f4f3ee;
+    --buttonblue: #77C4E6;
+}
+
+body {
+    margin: 0 14rem 0 14rem;
+    background-color: #E4DBD7;
+    color: var(--offblack);
+    max-width: 100vw;
+    max-height: 100vh;
+}
+
+h1 {
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+    text-align: center;
+    font-size: 5.4rem;
+    font-family: "Raleway", sans-serif;
+    font-weight: 900;
+}
+
+h2 {
+    font-size: 3rem;
+    font-family: "Raleway", sans-serif;
+    font-weight: 600;
+    padding-bottom: 2rem;
+}
+
+p,
+strong {
+    font-size: 1.8rem;
+    font-family: "Roboto", sans-serif;
+}
+
+.card-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(35rem, 1fr));
+    grid-template-rows: 1fr;
+    gap: 2rem;
+    overflow: auto;
+}
+
+.card {
+    padding: 2rem;
+    border: solid 5px var(--offblack);
+    border-radius: 24px;
+    background-color: #bfa89e;
+}
+
+.add-btn {
+    position: fixed;
+    top: 1rem;
+    right: 1rem;
+    font-size: 8rem;
+    padding: 1rem 4rem;
+    border: solid 5px var(--offblack);
+    background-color: hsl(198.4, 68.9%, 68.4%);
+    color: var(--offblack);
+    font-family: "Raleway", sans-serif;
+    font-weight: 600;
+    border-radius: 50%;
+}
+
+.add-btn:hover {
+    background-color: hsl(198.4, 68.9%, 50%);
+}
