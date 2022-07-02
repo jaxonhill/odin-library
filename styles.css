@@ -135,6 +135,7 @@ label {
 input {
     width: 100%;
     padding-left: 1.2rem;
+    padding-right: 1.2rem;
     font-size: 1.8rem;
     color: var(--offblack);
     border-radius: 2rem;
@@ -146,6 +147,11 @@ input:focus {
     outline: none;
     border-color: var(--buttonblue);
 }
+
+/* input:required:invalid {
+    outline: none;
+    border-color: red;
+} */
 
 #submit {
     font-family: "Roboto", sans-serif;
