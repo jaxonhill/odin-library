@@ -207,3 +207,42 @@ input:focus {
     background-color: hsl(198.4, 68.9%, 50%);
     cursor: pointer;
 }
+
+.bot-btn {
+    font-family: "Roboto", sans-serif;
+    font-size: 1.8rem;
+    font-weight: 700;
+    padding: 1rem 2rem;
+    width: auto;
+    border: solid 3px var(--offblack);
+    border-radius: 3rem;
+}
+
+.btn-container {
+    display: flex;
+    gap: 1rem;
+    padding-top: 1rem;
+    justify-content: flex-end;
+}
+
+.mark {
+    background-color: var(--buttonblue);
+}
+
+.mark:hover {
+    background-color: hsl(198.4, 68.9%, 50%);
+    cursor: pointer;
+}
+
+.read {
+    background-color: hsl(198.4, 68.9%, 50%);
+}
+
+.delete {
+    background-color: #EB837B;
+}
+
+.delete:hover {
+    background-color: #e56056;
+    cursor: pointer;
+}

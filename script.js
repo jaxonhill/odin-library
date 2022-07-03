@@ -8,6 +8,7 @@ function Book(title, author, pages, year, genre) {
     this.pages = pages;
     this.year = year;
     this.genre = genre;
+    this.hasRead = false;
 }
 
 // Function to add a book object to the array
@@ -26,6 +27,10 @@ const pagesInput = document.querySelector('#pages');
 const yearInput = document.querySelector('#year');
 const genreInput = document.querySelector('#genre');
 const addBookButton = document.querySelector('#submit');
+
+// Get mark as read and delete buttons
+const markReadButton = document.querySelector('.mark');
+const deleteButton = document.querySelector('.delete');
 
 // Add a click event listener so we can pop up the form with add button
 addButton.addEventListener('click', () => {
@@ -69,6 +74,22 @@ addBookButton.addEventListener('click', () => {
         pGenre.innerHTML = `<strong>Genre: </strong>${novel.genre}`;
         card.appendChild(pGenre);
 
+        const buttonContainer = document.createElement('div');
+        buttonContainer.classList.add('btn-container');
+        const markBtn = document.createElement('button');
+        markBtn.textContent = 'Mark as Read';
+        markBtn.classList.add('bot-btn');
+        markBtn.classList.add('mark');
+        const delBtn = document.createElement('button');
+        delBtn.textContent = 'Delete';
+        delBtn.classList.add('bot-btn');
+        delBtn.classList.add('delete');
+
+        buttonContainer.appendChild(markBtn);
+        buttonContainer.appendChild(delBtn);
+
+        card.appendChild(buttonContainer);
+
         // Finally append the card to the card container
         cardContainer.appendChild(card);
 
@@ -82,6 +103,7 @@ addBookButton.addEventListener('click', () => {
         // Then close the modal
         const modal = closeButton.closest('.modal');
         closeModal(modal);
+        addBookToLibrary(novel);
     } else {
         alert("You must enter a TITLE and an AUTHOR");
     }
